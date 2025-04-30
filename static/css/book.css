@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+}
+
+.booking-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+  /* Center contents with flexbox */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking-container h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input[type="date"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus and hover styles for accessibility */
+.form-group input[type="date"]:focus {
+  border-color: #005cbf;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  outline: none;  /* Remove default outline, since we use box-shadow */
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:focus {
+  outline: none;
+  /* Emphasize focus state for keyboard users&#8203;:contentReference[oaicite:5]{index=5} */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}

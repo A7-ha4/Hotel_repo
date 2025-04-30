@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Room - {{ room.room_number }}</title>
+  <link rel="stylesheet" href="{% static 'css/book.css' %}">
+</head>
+<body>
+  <nav>...fixed navbar here (from base template)...</nav>
+  <main class="booking-container">
+    <h1>{{ room.room_number }} - {{ room.room_type }}</h1>
+    <p><strong>Type:</strong> {{ room.room_type }}</p>
+    <p>{{ room.description }}</p>
+    <p><strong>Price:</strong> ${{ room.price_per_night }} per night</p>
+
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="checkin">Check-in Date:</label>
+        <input type="date" id="checkin" name="check_in"> <!-- Updated 'check_in' here -->
+      </div>
+      <div class="form-group">
+        <label for="checkout">Check-out Date:</label>
+        <input type="date" id="checkout" name="check_out"> <!-- Updated 'check_out' here -->
+      </div>
+      <button type="submit">Book Now</button>
+    </form>
+  </main>
+</body>
+</html>

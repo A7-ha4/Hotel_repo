@@ -1,0 +1,104 @@
+/* Reset and base font */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* ====== Navbar Styles ====== */
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: fixed;   /* fixed at top of viewport */
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Box shadow for slight depth */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo/Brand */
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Nav links container (ul) */
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.nav-links li {
+    margin-left: 20px;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+.nav-links li a:hover {
+    background: #f0f0f0;  /* light grey on hover */
+}
+
+/* Authentication links (profile icon, username, buttons) */
+.auth-links {
+    display: flex;
+    align-items: center;
+}
+.profile-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #ccc;
+    border-radius: 50%;  /* makes the square a circle */
+    margin-right: 10px;
+}
+.username {
+    margin-right: 15px;
+    font-weight: 500;
+}
+.btn {
+    padding: 8px 12px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn:hover {
+    background-color: #555;
+}
+
+/* ====== Hero Section ====== */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    /* Add top margin equal to navbar height to avoid overlap */
+    margin-top: 60px;
+    background-color: #f9f9f9;
+}
+.hero h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+.hero p {
+    font-size: 1.2em;
+    color: #666;
+}
